@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head >
+        <link rel="stylesheet" type="text/css" th.href="register.css">
+        <script src="controller.js" type="text/javascript"></script>
+        <script src="https://code.angularjs.org/1.4.9/angular.js"></script>
+        <title>Add Product</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <body class="form-group">
+        <div class="header">
+            <img src="pick-n-pay-logo1.jpg" />
+            <hr>
+        </div>
+      
+        <form method="post">
+            <div>
+                <div class="form-group">
+                    <label for="name" class="cols-sm-2 control-label">Name</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+
+                            <input type="text" class="form-control" name="name" required/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="price" class="cols-sm-2 control-label">Price</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <input type="text" class="form-control" nampricee="" required/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="cols-sm-10">
+                        <label for="image" class="cols-sm-2 control-label">Picture</label>
+                        <div class="input-group">
+
+                            <input type="text" class="form-control" name="image"required/>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </form>
+        <div class="form-group ">
+            <button type="submit" class="form-btn"/>Add Product</button>
+    </div>
+</body>
+</html>

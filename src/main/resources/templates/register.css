@@ -1,0 +1,52 @@
+body, html{
+        height: 100%;
+ 	background-repeat: no-repeat;
+ 	background-color:#fff;
+ 	font-family: 'Oxygen', sans-serif;
+        
+        
+}
+form p {
+    color: blue;
+}
+.main{
+ 	margin-top: 70px;
+}
+
+h1.title { 
+	font-size: 50px;
+	font-family: 'Passion One', cursive; 
+	font-weight: 400; 
+}
+hr{
+        display: block;
+        height: 1px;
+        border-top: 1px solid #ccc;
+        margin: 1em 0;
+        padding: 0;
+}
+
+.form-group{
+	margin-bottom: 15px;
+}
+
+label{
+	margin-bottom: 15px;
+}
+
+input,
+input::-webkit-input-placeholder {
+    font-size: 11px;
+    padding-top: 3px;
+}
+.main-center{
+ 	margin-top: 30px;
+ 	margin: 0 auto;
+ 	max-width: 330px;
+        padding: 40px 40px;
+
+}
+.login-register{
+	font-size: 11px;
+	text-align: center;
+}

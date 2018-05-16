@@ -1,0 +1,32 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+
+    <section class="container text-center">
+        <div class="login">
+            
+            <h1><span id="formHeading">Login or </span><a id="formOption" onclick="formToggle()" href="register.html">Sign Up</a></h1>
+            
+            <!--Login form-->
+            <form id="login_form" name="login_form" method="post" action="login()">
+                
+                <p hidden class="well" id="login_validation_errors"></p>
+                
+                <input id="login_user" type="text" name="login_user" value="" placeholder="Username or Email"></br>
+                
+                <input id="login_password" type="password" name="login_password" value="" placeholder="Password"></br>
+
+                <label>
+                    <input type="checkbox" name="login_remember_checkbox" id="login_remember_checkbox"> Remember me on this computer
+                </label></br>
+            
+                <input id="login_submit" type="submit" name="login_submit" value="Login">
+                
+            </form>
+            <p class="text-center">Forgot your password?<br> <a href="forgot.html">Click here to reset it</a>.</p>
+        
+        </div>
+        
+    </section>
