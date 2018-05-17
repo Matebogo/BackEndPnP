@@ -30,7 +30,7 @@ public class AdminController {
     
     
     @RequestMapping(value = "/save", method = RequestMethod.POST)
-    public String createAdmin(@RequestBody Admin admin){
+    public String addAdmin(@RequestBody Admin admin){
     
         if( admin != null){
         
@@ -42,13 +42,13 @@ public class AdminController {
     
     
     @RequestMapping(value = "/all", method = RequestMethod.GET)
-    public List<Admin> admins(){
+    public List<Admin> getAdmins(){
     
         return adminService.admins();
     }
     
     @RequestMapping(value = "/getAdmin/{adminID}", method = RequestMethod.GET)
-    public Admin Admins(@PathVariable int adminID){
+    public Admin getAdmin(@PathVariable int adminID){
     
         return this.adminService.getAdmin(adminID);
     }

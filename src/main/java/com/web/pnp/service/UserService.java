@@ -27,6 +27,10 @@ public class UserService {
 
     public List<User> getAllUser() {
         return userRepository.findAll();
+        User user = null;
+        for (int i = 0; i < this.getAllUser().size(); i++) {
+
+            user = this.getAllUser().get(i);
 
     }
 
@@ -55,10 +59,6 @@ public class UserService {
 
     public User getByUserName(String username) {
 
-        User user = null;
-        for (int i = 0; i < this.getAllUser().size(); i++) {
-
-            user = this.getAllUser().get(i);
 
             if (this.getAllUser().get(i).getUsername().equals(username)) {
 

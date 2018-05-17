@@ -29,11 +29,10 @@ public class Orders implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int orderID;
   
-    private double total;
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date dateCreated;
     private String delivered;
-    private String  username;
+    private String  customerName;
     private String houseNo ;
     private  String province ;
     private String address ;
@@ -42,11 +41,11 @@ public class Orders implements Serializable {
     private int driverID;
 
     public String getUsername() {
-        return username;
+        return customerName;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUsername(String customerName) {
+        this.customerName = customerName;
     }
 
   
@@ -65,14 +64,6 @@ public class Orders implements Serializable {
 
     public void setOrderID(int orderID) {
         this.orderID = orderID;
-    }
-
-    public double getTotal() {
-        return total;
-    }
-
-    public void setTotal(double total) {
-        this.total = total;
     }
 
     public int getDriverID() {

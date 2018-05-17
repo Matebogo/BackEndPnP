@@ -58,10 +58,10 @@ public class OrderController {
     }
 
     @CrossOrigin
-    @RequestMapping(value = "/customer-orders/{customerID}", method = RequestMethod.GET)
-    public List<Orders> customerOrders(@PathVariable int customerID) {
+    @RequestMapping(value = "/customer-orders/{username}", method = RequestMethod.GET)
+    public List<Orders> customerOrders(@PathVariable String username) {
 
-        return this.orderService.getCustomerOrders(customerID);
+        return this.orderService.getCustomerOrders(username);
 
     }
 }

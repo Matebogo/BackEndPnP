@@ -48,7 +48,7 @@ public class OrderService {
         
         return orderRepository.save(order);
     }
-      public List<Orders> getCustomerOrders(int customerID){
+      public List<Orders> getCustomerOrders(String username){
     
         List<Orders> orders = this.getOrders();
         List<Orders> customerOrders = new ArrayList<>();
@@ -57,7 +57,7 @@ public class OrderService {
         
             for (int i = 0; i < orders.size(); i++) {
                 
-                if(orders.get(i).getUserID() == customerID){
+                if(orders.get(i).getUsername()== username){
                 
                     customerOrders.add(orders.get(i));
                 }
