@@ -39,6 +39,7 @@ public class Orders implements Serializable {
     private String postalCode ;
     @Column(name = "driver_id")
     private int driverID;
+    private int userID;
 
     public String getUsername() {
         return customerName;
@@ -112,6 +113,22 @@ public class Orders implements Serializable {
 
     public void setPostalCode(String postalCode) {
         this.postalCode = postalCode;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
+    public int getUserID() {
+        return userID;
+    }
+
+    public void setUserID(int userID) {
+        this.userID = userID;
     }
     
 }

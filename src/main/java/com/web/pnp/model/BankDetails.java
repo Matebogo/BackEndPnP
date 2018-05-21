@@ -27,9 +27,11 @@ public class BankDetails implements Serializable{
     private int id;
     
     private int cardNumber;
-    private String cardHolder;   
+    private String cardHolder; 
+    private double total;
     @Column(name = "user_id")
     private int userID;
+    
 
     public BankDetails() {
     }
@@ -64,6 +66,14 @@ public class BankDetails implements Serializable{
 
     public void setCardNumber(int cardNumber) {
         this.cardNumber = cardNumber;
+    }
+
+    public double getTotal() {
+        return total;
+    }
+
+    public void setTotal(double total) {
+        this.total = total;
     }
 
     

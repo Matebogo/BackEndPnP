@@ -37,7 +37,7 @@ public class User implements Serializable {
     private String username;
     private String email;
     private String password;
-   @ManyToMany(cascade = {CascadeType.PERSIST}, fetch = FetchType.EAGER)
+    @ManyToMany(cascade = {CascadeType.PERSIST}, fetch = FetchType.EAGER)
     @JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "userID"))
     private Set<Role> roles;
 

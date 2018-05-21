@@ -32,12 +32,13 @@ public class Product implements Serializable {
     @Column(name = "price")
     private double price;
     @Column(name = "picture")
-    private String picture;
-    private int totalQuantity;
+    private String picture;    
     private int quantity;
+    private int minimumQuantity;
     private int badgeQuantity;
-
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.MERGE)
+          
+   
+    @ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.MERGE)
     @JoinColumn(name = "supplier_id")
     private Supplier supplier;
 
@@ -91,11 +92,11 @@ public class Product implements Serializable {
     }
 
     public int getMinimumQuantity() {
-        return totalQuantity;
+        return minimumQuantity;
     }
 
     public void setMinimumQuantity(int minimumQuantity) {
-        this.totalQuantity = totalQuantity;
+        this.minimumQuantity = minimumQuantity;
     }
 
     public Supplier getSupplier() {
@@ -113,9 +114,6 @@ public class Product implements Serializable {
     public void setBadgeQuantity(int badgeQuantity) {
         this.badgeQuantity = badgeQuantity;
     }
-
-    public int totalQuantity() {
-        return getQuantity() * getBadgeQuantity();
-    }
-
+  
+    
 }
