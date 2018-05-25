@@ -28,27 +28,12 @@ import javax.persistence.ManyToMany;
 @Inheritance(strategy = InheritanceType.JOINED)
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Customer extends  User implements Serializable{
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id; 
-    @ManyToMany(cascade = {CascadeType.PERSIST}, fetch = FetchType.EAGER)
-    @JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "userID"))
-    private Set<Role> roles; 
-
-    public int getId() {
-        return id;
+    public Customer()
+    {
     }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public Set<Role> getRoles() {
-        return roles;
-    }
-
-    public void setRoles(Set<Role> roles) {
-        this.roles = roles;
+    public Customer(User user)
+    {
+        super();
     }
 
 }
